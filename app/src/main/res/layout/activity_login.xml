@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="11"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_weight="5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:src="@drawable/logo"
+            android:layout_width="match_parent"
+            android:layout_height="150dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_weight="6"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TiTaiKhoan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edTaiKhoan"
+                android:hint="Số điện thoại"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/TiMatKhau"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edMatKhau"
+                android:hint="Mật Khẩu"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btnDangNhap"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:background="@drawable/ic_btn"
+            android:textAllCaps="false"
+            android:text="Đăng Nhập"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/btnDangNhapRong"
+            android:textStyle="bold"
+            android:textColor="#CCCCCC"
+            android:background="@drawable/ic_btn"
+            android:textAllCaps="false"
+            android:text="Đăng Nhập"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_vertical"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <View
+               android:layout_gravity="center"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:alpha=".5"
+                android:background="@android:color/black" />
+            <TextView
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="HOẶC"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <View
+                android:layout_gravity="center"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:alpha=".5"
+                android:background="@android:color/black" />
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnTaoTK"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_btn_dk"
+            android:textAllCaps="false"
+            android:text="Tạo Tài Khoản Facebook Mới"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    </LinearLayout>
+    <include
+        android:visibility="gone"
+        android:id="@+id/menu_progressbar2"
+        layout="@layout/progressbar">
+    </include>
+</RelativeLayout>
